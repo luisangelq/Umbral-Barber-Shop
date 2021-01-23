@@ -1,0 +1,41 @@
+body {
+  background-color: $black;
+}
+.barber-content {
+  @include tablet {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .image {
+    height: 40rem;
+    background-image: url("/build/img/1.jpg");
+    background-size: cover;
+    background-position: center center;
+    @include tablet {
+      height: auto;
+    }
+  }
+}
+
+.app {
+  padding: 4rem;
+  box-shadow: -16px -16px 27px -16px rgba(34, 116, 165, 0.6);
+
+  .section {
+    display: none;
+    margin-top: 1rem;
+    h2 {
+      color: $brown;
+    }
+    p {
+      text-align: center;
+      color: $white;
+    }
+    
+  }
+}
+
+.show-section {
+  display: block !important;
+}

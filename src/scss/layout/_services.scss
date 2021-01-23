@@ -1,0 +1,51 @@
+.services-list {
+  @include phone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .service {
+    background-color: $white;
+    border-radius: 2rem;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    @include phone {
+        margin: 0;
+    }
+    p {
+      margin: 0 0 2rem 0;
+    }
+
+    .service-name {
+      color: $black;
+      font-weight: bold;
+    }
+
+    .service-price {
+      color: $blue;
+      font-weight: 900;
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    &:hover {
+        background-color: $blue;
+        p {
+            color: $white;
+        }
+        
+    }
+    &.selected {
+        background-color: $blue;
+        .service-price {
+            color: $white;
+            &::after {
+                content: " ✔";
+            }
+        }
+    }
+  }
+}

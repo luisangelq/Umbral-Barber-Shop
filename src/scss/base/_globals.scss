@@ -26,13 +26,15 @@ p {
 
 a {
     text-decoration: none;
-    font-weight: bold;
 }
 img {
     max-width: 100%;
 }
 h1, h2, h3 {
-    margin: 0;
+    margin: 0 0 2rem 0;
+    font-weight: 900;
+    color: $blue;
+    text-align: center;
 }
 h1 {
     font-size: 4rem;
