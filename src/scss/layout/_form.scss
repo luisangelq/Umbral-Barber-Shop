@@ -1,8 +1,12 @@
 
 .field {
-    display: flex;
-    align-items: center;
+    
     margin-bottom: 2rem;
+    @include phone {
+        display: flex;
+    align-items: center;
+    }
+    
     label {
         flex: 0 0 10rem;
         color: $white;
@@ -13,6 +17,8 @@
         border-radius: 2rem;
         border: none;
         outline: none;
+        width: 100%;
+        margin-top: .5rem;
         
         &:focus { 
             box-shadow: 1px 15px 7px -4px rgba(34,116,165,1);
