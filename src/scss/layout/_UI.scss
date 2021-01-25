@@ -25,11 +25,13 @@ body {
   .section {
     display: none;
     margin-top: 1rem;
+    .align {
+      text-align: center;
+    }
     h2 {
       color: $brown;
     }
     p {
-      text-align: center;
       color: $white;
     }
     

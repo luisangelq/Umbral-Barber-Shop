@@ -1,0 +1,38 @@
+
+.field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    label {
+        flex: 0 0 10rem;
+        color: $white;
+    }
+    input {
+        flex: 1;
+        padding: 1rem;
+        border-radius: 2rem;
+        border: none;
+        outline: none;
+        
+        &:focus { 
+            box-shadow: 1px 15px 7px -4px rgba(34,116,165,1);
+        }
+
+    }
+}
+
+.alert {
+    padding: 2rem;
+    text-align: center;
+    color: $black;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    border-radius: 2rem;
+    &.error {
+        background-color: #C20000;
+    }
+    &.warning {
+        background-color: #FFAB00;
+    }
+}

@@ -1,0 +1,46 @@
+.error-date {
+    margin: 2rem 0;
+    text-transform: uppercase;
+}
+
+.summary-content {
+    margin-bottom: 2rem 0;
+    
+    p {
+        margin-bottom: .5rem;
+        text-align: left;
+        span {
+            font-weight: bold;
+            color: $blue;
+            font-size: 2.4rem;
+            
+        }
+    }
+
+    .service-content {
+        h3 {
+            margin: 5rem;
+            color: $brown;
+        }
+        .service-div {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid gray;
+            p {
+                text-align: center ;
+            }
+            .price {
+                font-size: 2.4rem;
+                font-weight: bold;
+                color: $blue;
+            }
+        }
+    }
+
+    
+}
+.totals {
+    text-align: end !important;
+    
+}
+

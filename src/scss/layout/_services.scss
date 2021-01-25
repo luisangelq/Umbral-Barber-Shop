@@ -1,3 +1,4 @@
+
 .services-list {
   @include phone {
     display: grid;
@@ -11,6 +12,7 @@
     padding: 2rem 0;
     margin-bottom: 2rem;
     transition: .2s ease-in-out;
+    text-align: center;
     cursor: pointer;
     @include phone {
         margin: 0;
