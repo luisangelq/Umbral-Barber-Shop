@@ -77,13 +77,14 @@ const startApp = () => {
 };
 const showServices = async () => {
   try {
-    const result = await fetch("./services.json");
+
+    const url = "http://localhost:3000/services.php"
+
+    const result = await fetch("services.json" ); // "services.json")
     const db = await result.json();
 
-    const { services } = db;
-
     //generate html
-    services.map((service) => {
+    db.forEach((service) => {
       const { id, name, price } = service;
 
       //DOM Scripting
@@ -313,18 +314,20 @@ const saveDate = () => {
   const dateInput = document.querySelector("#date");
   dateInput.addEventListener("input", (e) => {
     const day = new Date(e.target.value).getUTCDay();
-    const today = new Date(e.target.value).getUTCDate();
-    const lastday = new Date().getUTCDate();
+    // const today = new Date(e.target.value).getUTCDate();
+    // const lastday = new Date().getUTCMonth();
 
     if ([6, 0].includes(day)) {
       e.preventDefault();
       dateInput.value = "";
       showAlert("Sorry we work from Mondays to Fridays", "warning");
-    } else if (today < lastday) {
-      e.preventDefault();
-      dateInput.value = "";
-      showAlert("This Day Might Be full", "warning");
-    } else {
+    } 
+  //   else if (today <= lastday) {
+  //     e.preventDefault();
+  //     dateInput.value = "";
+  //     showAlert("This Day Might Be full", "warning");
+  //  }
+    else {
       const alert = document.querySelector(".alert");
       if (alert) {
         alert.remove();

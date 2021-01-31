@@ -1,5 +1,5 @@
-{
-    "services": [
+[ 
+     
         {
             "id": 1,
             "name": "Corte de Cabello Adulto",
@@ -41,5 +41,5 @@
             "price": 400
         }
         
-    ]
-}
+    
+]
